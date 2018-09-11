@@ -8,11 +8,14 @@
 	height 200px
 	width 100%
 	display block
-	background red
 	box-sizing border-box
+	background red
 
-	+below(xl)
-		background green
+	+above(1000, true)
+		background blue
 
-	+only(md)
+	+below(sm)
 		background yellow
+
+	+between(200, 500, true)
+		border 20px solid green
