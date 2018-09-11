@@ -1,0 +1,49 @@
+// ******************** //
+// variables
+// ******************** //
+
+breakpoints ?= 'sm', 'md', 'lg'
+reducer = .02
+values = {
+	'xs': 0,
+	'sm': 576px,
+	'md': 768px,
+	'lg': 992px,
+	'xl': 1200px
+}
+
+
+
+// ******************** //
+// breakpoints
+// ******************** //
+
+above(val)
+	@media (min-width: values[val])
+		{block}
+
+below(val)
+	if val != 'xs'
+		@media (max-width: values[val] - reducer)
+			{block}
+
+only(val)
+	if val == 'xs'
+		@media (max-width: values[sm] - reducer)
+			{block}
+	else if val == 'sm'
+		@media (min-width: values[val]) and (max-width: values[md] - reducer)
+			{block}
+	else if val == 'md'
+		@media (min-width: values[val]) and (max-width: values[lg] - reducer)
+			{block}
+	else if val == 'lg'
+		@media (min-width: values[val]) and (max-width: values[xl] - reducer)
+			{block}
+	else
+		@media (min-width: values[xl])
+			{block}
+
+between(min, max)
+	@media (min-width: values[min]) and (max-width: values[max] - reducer)
+		{block}

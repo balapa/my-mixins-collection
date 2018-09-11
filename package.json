@@ -1,0 +1,11 @@
+{
+  "name": "stylus-mixins",
+  "version": "1.0.0",
+  "description": "my stylus mixins collection",
+  "main": "index.js",
+  "repository": "https://github.com/balapa/my-mixins-collection",
+  "license": "MIT",
+	"scripts": {
+		"stylus": "stylus -w stylus/style.styl -o css/style.css"
+	}
+}

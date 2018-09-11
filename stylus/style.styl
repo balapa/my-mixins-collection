@@ -1,0 +1,18 @@
+@import 'mixins/breakpoints.styl'
+
+*
+	margin 0
+	padding 0
+
+.box
+	height 200px
+	width 100%
+	display block
+	background red
+	box-sizing border-box
+
+	+below(xl)
+		background green
+
+	+only(md)
+		background yellow

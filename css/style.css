@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  height: 200px;
+  width: 100%;
+  display: block;
+  background: #f00;
+  box-sizing: border-box;
+}
+@media (max-width: 1199.98px) {
+  .box {
+    background: #008000;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .box {
+    background: #ff0;
+  }
+}
